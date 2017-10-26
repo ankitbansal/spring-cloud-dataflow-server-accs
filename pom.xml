@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-cloud-dataflow-server-accs</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <groupId>oracle.paas.accs</groupId>
+    <packaging>jar</packaging>
+
+    <description>ACCS Spring Cloud Dataflow Server</description>
+
+    <parent>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dataflow-parent</artifactId>
+        <version>1.2.2.RELEASE</version>
+        <relativePath />
+    </parent>
+
+
+    <properties>
+        <checkstyle.skip>true</checkstyle.skip>
+        <start-class>oracle.paas.accs.dataflow.server.ACCSDataFlowServer</start-class>
+        <spring-boot.version>1.5.7.RELEASE</spring-boot.version>
+        <spring-cloud-dataflow.version>1.2.2.RELEASE</spring-cloud-dataflow.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dataflow-server-core</artifactId>
+            <version>${spring-cloud-dataflow.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
